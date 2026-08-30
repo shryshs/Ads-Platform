@@ -4,3 +4,11 @@ __pycache__/
 *.db
 .env
 .vscode/
+aws/
+aws/*
+*.aws
+.aws/
+.terraform/
+*.tfstate
+*.tfstate.backup
+/aws/
