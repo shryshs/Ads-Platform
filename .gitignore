@@ -8,3 +8,7 @@ aws/
 aws/*
 *.aws
 .aws/
+.terraform/
+*.tfstate
+*.tfstate.backup
+/aws/
