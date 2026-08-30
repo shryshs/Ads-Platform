@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Latest Ads</h2>
+
+{% if ads %}
+
+<div class="ads-grid">
+    {% for ad in ads %}
+    <div class="card">
+        <img src="/static/placeholder.jpg" alt="Placeholder image">
+
+        <h3>{{ ad.title }}</h3>
+
+        <p>{{ ad.description }}</p>
+
+        <strong>{{ ad.price }}</strong>
+
+        <div class="actions">
+            <a href="/edit/{{ ad.id }}">Edit</a>
+            <form action="/delete/{{ ad.id }}" method="post" onsubmit="return confirm('Are you sure you want to delete this ad?');" style="display: inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% else %}
+
+<p>No ads yet.</p>
+
+{% endif %}
+
+{% endblock %}

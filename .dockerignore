@@ -1,0 +1,12 @@
+.venv
+.git
+__pycache__
+*.pyc
+*.pyo
+*.db
+.env
+.vscode
+aws/
+aws/*
+*.aws
+.aws/
